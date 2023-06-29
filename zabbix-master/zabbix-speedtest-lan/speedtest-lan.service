@@ -1,0 +1,11 @@
+[Unit]
+Description=Run a LAN speedtest
+After=network.target
+
+[Service]
+Type=simple
+User=zabbix
+ExecStart=/etc/zabbix/script/speedtest-lan.sh -a
+
+[Install]
+WantedBy=multi-user.target
